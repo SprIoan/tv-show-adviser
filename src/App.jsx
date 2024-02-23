@@ -74,7 +74,7 @@ const App = () => {
           <div className="col-4">
             <Logo
               img={logoImg}
-              title={"Watowatch"}
+              title={"Watch Next"}
               subtitle={"Find a show you may like"}
             />
           </div>
