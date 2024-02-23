@@ -1,5 +1,5 @@
 import axios from "axios";
-import { BASE_URL, bearerToken } from "../config";
+import { BASE_URL } from "../config";
 // import { FAKE_POPULARS, FAKE_RECOMMENDATIONS } from "./fake-data";
 
 
@@ -13,7 +13,7 @@ export class TVShowAPI {
               sort_by: 'popularity.desc',
             },
             headers: {
-              Authorization: `Bearer ${bearerToken}`,
+              Authorization: `Bearer ${process.env.REACT_APP_TMDB_BEARER_TOKEN}`,
               accept: 'application/json'
             }
           });
@@ -30,7 +30,7 @@ export class TVShowAPI {
             sort_by: 'popularity.desc',
           },
           headers: {
-            Authorization: `Bearer ${bearerToken}`,
+            Authorization: `Bearer ${process.env.REACT_APP_TMDB_BEARER_TOKEN}`,
             accept: 'application/json'
           }
         });
@@ -47,7 +47,7 @@ export class TVShowAPI {
         page: 1,
       },
       headers: {
-        Authorization: `Bearer ${bearerToken}`,
+        Authorization: `Bearer ${process.env.REACT_APP_TMDB_BEARER_TOKEN}`,
         accept: 'application/json'
       }
     });
